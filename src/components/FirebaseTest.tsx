@@ -10,7 +10,7 @@ const FirebaseTest = () => {
     useEffect(() => {
         // Subscribe to readings
         const unsubscribe = subscribeReadings((data) => {
-            console.log("Readings received:", data);
+            // console.log("Readings received:", data);
             setReadings(data);
         });
 
@@ -19,7 +19,7 @@ const FirebaseTest = () => {
 
     const seedDatabase = async () => {
         try {
-            console.log("Attempting to seed database...");
+            // console.log("Attempting to seed database...");
 
             // Seed Readings
             await set(ref(db, 'Readings'), {
@@ -58,7 +58,7 @@ const FirebaseTest = () => {
                 humidityThreshold: 40
             });
 
-            console.log("Database seeded successfully!");
+            // console.log("Database seeded successfully!");
             alert("Database seeded successfully! If you see readings below, it works.");
             setError(null);
         } catch (err: any) {
