@@ -1,0 +1,8 @@
+{
+  "name": "AGRO - Smart Agriculture PWA",
+  "description": "A smart irrigation and crop monitoring dashboard with real-time sensor analytics, automated water scheduling for sugarcane, and multilingual AI assistance.",
+  "requestFramePermissions": [
+    "microphone",
+    "geolocation"
+  ]
+}
