@@ -44,3 +44,52 @@ graph TD
     F -->|AI Queries| G[Gemini 2.0 Flash API]
     F -->|Command Writes| E
     E -->|Relay Control| H[Water Pump Relay]
+```
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+| :--- | :--- |
+| **React 19** | Modern UI Component Library |
+| **TypeScript** | Type-safe enterprise JavaScript |
+| **Vite 6** | High-performance frontend build tool |
+| **Tailwind CSS 4** | Responsive agricultural design system |
+| **Firebase RTDB** | Sub-second telemetry streaming & pump relay state sync |
+| **Google Gemini AI** | Vision disease diagnosis & multilingual agronomic advisory |
+| **Recharts** | Interactive sensor telemetry visualization |
+| **Vite PWA** | Offline cache and service worker management |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v18 or newer)
+- npm or yarn
+
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/shdileep/Agro.git
+
+# Navigate to project directory
+cd Agro
+
+# Install dependencies
+npm install
+
+# Setup environment variables
+cp .env.example .env.local
+
+# Run development server
+npm run dev
+```
+
+### Building for Production
+```bash
+npm run build
+npm run preview
+```
+
