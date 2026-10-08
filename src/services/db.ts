@@ -55,7 +55,12 @@ const automationRef = ref(db, 'AgroAutomation');
 
 // Services
 
-export const subscribeReadings = (callback: (data: SensorReadings | null) => void) => {
+/**
+ * Subscribe to realtime sensor readings stream from Firebase
+ * @param callback Callback invoked when sensor readings change
+ * @returns Unsubscribe function
+ */
+export const subscribeReadings = (callback: (data: SensorReadings | null) => void): (() => void) => {
     return onValue(readingsRef, (snapshot) => {
         callback(snapshot.val());
     });
