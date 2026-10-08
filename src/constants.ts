@@ -25,3 +25,18 @@ export const LANGUAGES = [
   { code: 'ta', name: 'Tamil' },
   { code: 'te', name: 'Telugu' }
 ];
+
+export const CROP_GROWTH_STAGES = [
+  { id: 'germination', name: 'Germination & Emergence', durationDays: 35 },
+  { id: 'tillering', name: 'Tillering Stage', durationDays: 60 },
+  { id: 'grand_growth', name: 'Grand Growth Stage', durationDays: 120 },
+  { id: 'maturation', name: 'Maturity & Ripening', durationDays: 60 }
+];
+
+export const PUMP_SAFETY_LIMITS = {
+  maxContinuousRunMinutes: 180,
+  cooldownPeriodMinutes: 30,
+  minVoltage: 180,
+  maxVoltage: 250
+};
+
