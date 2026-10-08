@@ -131,3 +131,16 @@ export const subscribeAgroWeather = (callback: (data: AgroWeatherData | null) =>
         callback(snapshot.val());
     });
 };
+
+/**
+ * Subscribe to Firebase Realtime Database online/offline connection state
+ * @param callback Callback returning true if connected, false otherwise
+ * @returns Unsubscribe function
+ */
+export const subscribeConnectionState = (callback: (isConnected: boolean) => void): (() => void) => {
+    const connectedRef = ref(db, '.info/connected');
+    return onValue(connectedRef, (snap) => {
+        callback(snap.val() === true);
+    });
+};
+
