@@ -12,6 +12,12 @@ const getAI = () => {
   return ai;
 };
 
+/**
+ * Query Google Gemini AI for agricultural advisory and sensor telemetry interpretation
+ * @param prompt Natural language or sensor query from the user
+ * @param language Target response language code ('en', 'ta', 'te')
+ * @returns Formatted agricultural advice string
+ */
 export const getAgroAIResponse = async (prompt: string, language: string = 'en') => {
   const systemInstruction = `
     You are AGRO AI, a specialized agricultural assistant for farmers in Tamil Nadu, India.
