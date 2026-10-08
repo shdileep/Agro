@@ -157,3 +157,14 @@ export const fetchWeather = async (lat: number, lon: number): Promise<WeatherDat
         throw error;
     }
 };
+
+/**
+ * Format temperature with unit suffix
+ */
+export const formatTemperature = (tempCelsius: number, unit: 'C' | 'F' = 'C'): string => {
+    if (unit === 'F') {
+        return `${Math.round((tempCelsius * 9) / 5 + 32)}°F`;
+    }
+    return `${Math.round(tempCelsius)}°C`;
+};
+
