@@ -22,8 +22,12 @@ const SensorCard: React.FC<SensorCardProps> = ({ label, value, unit, status, ico
   };
 
   return (
-    <div className="floating-card p-4 flex flex-col items-center justify-center text-center min-w-[100px] flex-1">
-      <div className={`w-10 h-10 rounded-full flex items-center justify-center mb-2 ${colorClass} bg-opacity-10`}>
+    <div
+      className="floating-card p-4 flex flex-col items-center justify-center text-center min-w-[100px] flex-1 transition-all hover:shadow-md"
+      role="region"
+      aria-label={`${label}: ${value} ${unit}, Status: ${status}`}
+    >
+      <div className={`w-10 h-10 rounded-full flex items-center justify-center mb-2 ${colorClass} bg-opacity-10`} aria-hidden="true">
         <i className={`${icon} ${colorClass.replace('bg-', 'text-')}`}></i>
       </div>
       <span className="text-xs text-slate-400 font-medium uppercase tracking-wider">{label}</span>
@@ -31,7 +35,10 @@ const SensorCard: React.FC<SensorCardProps> = ({ label, value, unit, status, ico
         <span className="text-2xl font-bold text-slate-800">{value}</span>
         <span className="text-xs text-slate-500">{unit}</span>
       </div>
-      <div className={`mt-2 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase ${getStatusColor(status)}`}>
+      <div
+        className={`mt-2 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase ${getStatusColor(status)}`}
+        aria-live="polite"
+      >
         {status}
       </div>
     </div>
