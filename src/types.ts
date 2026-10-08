@@ -53,3 +53,18 @@ export interface DeviceStatus {
   relayActive: boolean;
 }
 
+export interface SoilCalibrationProfile {
+  dryRawAdc: number;
+  wetRawAdc: number;
+  soilType: 'clay' | 'loam' | 'sandy' | 'alluvial';
+  lastCalibratedAt: string;
+}
+
+export interface SystemHealthReport {
+  cpuUsagePct: number;
+  freeMemoryBytes: number;
+  wifiRssi: number;
+  uptimeSeconds: number;
+}
+
+
