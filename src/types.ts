@@ -36,3 +36,20 @@ export interface WeatherData {
   condition: string;
   forecast: { day: string; temp: number; icon: string }[];
 }
+
+export interface TelemetryRecord {
+  timestamp: number;
+  moisture: number;
+  temperature: number;
+  humidity: number;
+  batteryLevel?: number;
+  signalStrength?: number;
+}
+
+export interface DeviceStatus {
+  online: boolean;
+  lastHeartbeat: string;
+  firmwareVersion: string;
+  relayActive: boolean;
+}
+
